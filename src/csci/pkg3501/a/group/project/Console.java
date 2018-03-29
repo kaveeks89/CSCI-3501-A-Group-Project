@@ -26,7 +26,7 @@ public class Console {
      * Constructs a memory with specified number of cells, and constructs an
      * associated processor.
      *
-     * @param cap the sepcified amount of memory
+     * @param cap the specified amount of memory
      */
     public Console(int cap) {
         memory = new Memory(cap);
