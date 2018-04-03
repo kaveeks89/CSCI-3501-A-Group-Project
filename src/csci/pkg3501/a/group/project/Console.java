@@ -55,7 +55,9 @@ public class Console {
             while (scan.hasNext()) {
                 memory.write(address++, scan.nextInt(16));
             }
+            
             cpu.setPC(0);
+            
         } catch (Exception e) {
             System.out.println(e);
         }
