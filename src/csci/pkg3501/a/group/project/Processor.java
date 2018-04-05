@@ -32,6 +32,7 @@ public class Processor {
          */
     }
 
+<<<<<<< HEAD
     //returns true if the program should halt
     /*
     128-255 could be instructions
@@ -55,6 +56,15 @@ public class Processor {
             System.out.println(reg[i]);
         }
 
+=======
+    //"dump" registers to console
+    public void dump() {
+        for (int i = 0; i < 8; i++)
+            System.out.println(reg[i]);
+        
+        System.out.println(PC);
+	System.out.println(IR);
+>>>>>>> 09fe5b4db888b51578ca35177cba828235b4aa39
     }
 
     //converts hex string to base 10 int
