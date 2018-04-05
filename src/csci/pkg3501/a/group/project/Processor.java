@@ -25,13 +25,14 @@ public class Processor {
         //insert logic for other commands here
         return false;
     }
-    
+
+    //"dump" registers to console
     public void dump() {
         for (int i = 0; i < 8; i++)
             System.out.println(reg[i]);
         
         System.out.println(PC);
-		System.out.println(IR);
+	System.out.println(IR);
     }
     
     //converts hex string to base 10 int
