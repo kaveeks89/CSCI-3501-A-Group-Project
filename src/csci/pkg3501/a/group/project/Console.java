@@ -49,7 +49,7 @@ public class Console {
      */
     public void load(String fName) {
         try {
-            File f = new File(fName);
+            File f = new File(System.getProperty("user.dir")+"\\"+fName);
             Scanner scan = new Scanner(f);
             int address = 0;
             while (scan.hasNext()) {

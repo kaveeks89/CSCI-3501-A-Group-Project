@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class Processor {
 
     private int[] reg = new int[8];
-    private int PC;
-    private int IR;
+    private int PC; //program counter
+    private int IR; //instruction register
     private Scanner kbd = new Scanner(System.in);
     private Memory memory;
 
@@ -19,20 +19,34 @@ public class Processor {
     }
 
     //Stub
-    public void execute(){}
-    
-    //returns true if the program should halt
-    public boolean step() {
-        String cmd = kbd.next();
+    public void execute() {
+        /*
+        IR = 0;
         //insert input validation here
-        int opcode = getBase10(cmd.substring(7, 8));
-        int a = getBase10(cmd.substring(8, 9));
-        int b = getBase10(cmd.substring(9));
+        int opcode = getBase10(cmd.substring(7, 8)); //third to last digit is the opcode
+        int a = getBase10(cmd.substring(8, 9)); //second to last digit is a register
+        int b = getBase10(cmd.substring(9));//very last digit is b register
         if (opcode == 0) {
             return true;
         }
-        //insert logic for other commands here
-        return false;
+         */
+    }
+
+    //returns true if the program should halt
+    /*
+    128-255 could be instructions
+     */
+    public boolean step() {
+
+        IR = reg[PC++];
+
+        if (IR == 0) {
+            return false; //stop stepping
+        } else {
+            execute();
+            return true; //keep stepping
+        }
+
     }
 
     public void dump() {
@@ -134,7 +148,7 @@ public class Processor {
                 case 'F':
                     built += "15";
                     break;
-                
+
             }
 
         }
