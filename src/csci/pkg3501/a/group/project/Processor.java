@@ -1,14 +1,5 @@
 package csci.pkg3501.a.group.project;
 
-<<<<<<< HEAD
-public class Processor {
-    
-    //constructor
-    Processor(){}
-    
-    //stub
-    void setPC() {
-=======
 import java.util.Scanner;
 
 public class Processor {
@@ -19,7 +10,6 @@ public class Processor {
     
     public void setPC(int pc) {
         PC = pc;
->>>>>>> ca8524e4200576ae5be492839998dea09c6f018a
     }
 
     //returns true if the program should halt
@@ -39,10 +29,6 @@ public class Processor {
     public void dump() {
     }
     
-<<<<<<< HEAD
-    //stub
-    void setMemory(Memory _memory){}
-=======
     //converts hex string to base 10 int
     private int getBase10(String c) {
         switch(c) {
@@ -64,5 +50,5 @@ public class Processor {
             default: return 0;
         }
     }
->>>>>>> f4cb99072ceee5b3db41656ef06adc53b90bd3e4
 }
+
