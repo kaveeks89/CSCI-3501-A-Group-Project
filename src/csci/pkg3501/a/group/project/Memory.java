@@ -3,8 +3,8 @@ package csci.pkg3501.a.group.project;
 public class Memory {
 
     int cap; //capacity
-    int[] cell;
-
+    int[] cell; //Memory contains an array of integer cells
+    
     //constructor
     Memory(int _cap) {
 
@@ -28,9 +28,8 @@ public class Memory {
     void dump() {
         
         for (int i = 0; i < cell.length; i++) {
-            cell[i] = -1; //-1 is how I'm defining an empty cell
+            System.out.println(cell[i]);
         }
-        
-        System.out.println("\033[32m" +"Memory dump complete.");
+
     }
 }
